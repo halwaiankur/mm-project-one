@@ -93,16 +93,14 @@ a {
     margin-top: 2rem;
     .category{
       @extend %eyebrow;
-      text-transform: uppercase;
-      position: relative;
     }
     .cardTitle{
       @extend %h2
     }
 
   }
-
-  .footer{
+  
+  footer{
     padding-left: 15px;
     text-align: left;
     position: inherit;
@@ -114,6 +112,8 @@ a {
     }
   }
 }
+
+//class to give equal height to all card components
 .row-eq-height {
   display:         flex;
   padding-bottom: 2rem;

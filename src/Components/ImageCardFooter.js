@@ -4,9 +4,9 @@ import React from "react";
 class ImageCardFooter extends React.Component {
     render(){
         return( 
-            <div className="footer">
+            <footer>
                 {this.props.data}
-            </div>
+            </footer>
         );
         
     }
