@@ -1,0 +1,127 @@
+// variables
+$mm-sample-font-sans-serif: Helvetica, Arial, sans-serif;
+$mm-sample-font-serif:      Georgia, "Times New Roman", Times, serif;
+
+
+html {
+  font-size: 62.5%; //why do we set the font size to this value at the html level?
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+header {
+  //nav work is already completed, no need to touch this
+  height: 6rem;
+  background-color: #002f6c;
+  box-sizing: border-box;
+  padding: 2.5rem 0;
+
+  .container {
+    margin-top: -.6rem;
+  }
+
+  img {
+    width: 16rem;
+  }
+}
+
+.container { margin-top: 5rem; }
+
+
+//Typography and button styles - included are some placeholders for styling
+//Keep in mind, a component may use one placeholder for a title / etc now but it
+// may change in 6 months and we want to be able to swap via only CSS changes
+h1, h2, %h2 {
+  font-family: $mm-sample-font-serif;
+  color: #000;
+}
+
+p, h1, h2, %h2 { margin: 0 0 2rem 0; }
+h1      { font-size: 4rem; }
+h2, %h2 { font-size: 3rem; }
+p       { font-size: 1.4rem;}
+
+a {
+  color: #005A9F;
+  &:hover {
+    color: #002f6c;
+  }
+}
+
+%eyebrow {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  line-height: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+%subtext {
+  font-size: 1.2rem;
+}
+
+%btn-primary {
+  color: #000;
+  font-size: 1rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1.2rem 4rem;
+  background-color: yellow;
+  border: 0;
+  border-radius: 0;
+}
+
+.mm-card {
+  //feel free to make any comments to explain your thinking
+  font-family: $mm-sample-font-serif;
+  
+  
+  .image {
+    //including some base styles so this shows up in the basic page, feel free to change these
+    height: inherit;
+    min-height: 15rem;
+    width:100%;
+    background-image: url('http://via.placeholder.com/778x368');
+  }
+
+  .content.container {
+    margin-top: 2rem;
+    .category{
+      @extend %eyebrow;
+      text-transform: uppercase;
+      position: relative;
+    }
+    .cardTitle{
+      @extend %h2
+    }
+
+  }
+
+  .footer{
+    padding-left: 15px;
+    text-align: left;
+    position: inherit;
+    padding-bottom: 1rem;
+    
+    .btn-primary{
+      @extend %btn-primary;
+
+    }
+  }
+}
+.row-eq-height {
+  display:         flex;
+  padding-bottom: 2rem;
+}
+
+.row{
+  padding-bottom: 15rem;
+}
+
+
+

@@ -1,27 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './css/App.css';
+import './css/code-exercise.scss';
+import BannerSection from './Components/BannerSection';
+import HeaderSection from './Components/HeaderSection';
+import ImageCarousel from './Components/ImageCarousel';
 
 class App extends Component {
   render() {
-    console.log("HI")
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    <div className="">
+      <HeaderSection />
+      <div className="container">
+        <BannerSection />
+          <ImageCarousel />
       </div>
+    </div>
     );
   }
 }
