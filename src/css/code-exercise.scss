@@ -103,8 +103,9 @@ a {
   footer{
     padding-left: 15px;
     text-align: left;
-    position: inherit;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    position: absolute;
+    bottom: 0px;
     
     .btn-primary{
       @extend %btn-primary;
@@ -123,5 +124,20 @@ a {
   padding-bottom: 15rem;
 }
 
+.bg-light{
+  position: relative;
+}
 
+.cardDesc{
+  min-height: 235px;
+}
 
+@media (max-width:370px){
+  .cardDesc{
+    min-height: 180px
+  }
+  footer{
+    position: relative;
+    padding-bottom: 2rem;
+  }
+}
